@@ -3,11 +3,11 @@ using hnl.veiculos.com.br.Entities;
 
 namespace hnl.veiculos.com.br.Interfaces.Services
 {
-    interface IServiceMarca
+    public interface IMarcaService
     {
          Marca get(decimal pId);
          List<Marca> list();
-         void put(Marca marca);
+         Marca put(Marca marca);
          void delete(decimal pId);
     }
 }

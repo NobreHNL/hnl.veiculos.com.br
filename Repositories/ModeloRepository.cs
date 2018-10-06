@@ -1,14 +1,16 @@
-        using System.Collections.Generic;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 using hnl.veiculos.com.br.Entities;
-using hnl.veiculos.com.br.Interfaces.Services;
+using hnl.veiculos.com.br.Interfaces.Repositories;
+using hnl.veiculos.com.br.Services;
 
-namespace hnl.veiculos.com.br.Services
+namespace hnl.veiculos.com.br.Repositories
 {
-    public class ServiceModelo: IServiceModelo
+    public class ModeloRepository : IModeloRepository
     {
         List<Modelo> modelos = new List<Modelo>();
-        public ServiceModelo(){
+        public ModeloRepository(){
             modelos.Add(new Modelo(1, 1, "Prisma 2020", "https://4.bp.blogspot.com/-7cHtB4maTyw/Wv2UOd1yW_I/AAAAAAAAFaA/ShzPpHwM7dsQN_BcWFdb2_v7-zjEiWLfACLcBGAs/s1600/novo-Prisma-2020%2B%25282%2529.jpg"));
             modelos.Add(new Modelo(2, 1, "Onix", "https://img1.icarros.com/dbimg/imgmodelo/2/2428_2.png"));
             modelos.Add(new Modelo(3, 1, "Cruze", "https://www.rydellchev.com/assets/stock/ColorMatched_01/White/640/cc_2018CHC300005_01_640/cc_2018CHC300005_01_640_G9K.jpg"));
@@ -40,9 +42,11 @@ namespace hnl.veiculos.com.br.Services
             return modelos;
         }
 
-        public void put(Modelo modelo)
+        public Modelo put(Modelo modelo)
         {
             modelos.Add(modelo);
+            return modelo;
         }
+
     }
 }

@@ -18,7 +18,7 @@ namespace hnl.veiculos.com.br.Entities
 
         public Marca(decimal Id, string Nome, string Imagem){
             this.ID = Id;
-            this.NOME = NOME;
+            this.NOME = Nome;
             this.IMAGEM = Imagem;
         }
     }

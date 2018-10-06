@@ -3,11 +3,11 @@ using hnl.veiculos.com.br.Entities;
 
 namespace hnl.veiculos.com.br.Interfaces.Services
 {
-    interface IServiceModelo
+    interface IModeloService
     {
         Modelo get(decimal pId);
         List<Modelo> list();
-        void put(Modelo modelo);
+        Modelo put(Modelo modelo);
         void delete(decimal pId);
     }
 }
