@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { FotosModule } from './fotos/fotos.module';
+import { MarcaComponent } from './marca/marca.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FotosModule } from './fotos/fotos.module';
     NavMenuComponent,
     HomeComponent,
     CounterComponent,
-    FetchDataComponent
+    FetchDataComponent,
+    MarcaComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -28,6 +30,7 @@ import { FotosModule } from './fotos/fotos.module';
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
+      { path: 'marca:id', component: MarcaComponent },
     ])
   ],
   providers: [],
