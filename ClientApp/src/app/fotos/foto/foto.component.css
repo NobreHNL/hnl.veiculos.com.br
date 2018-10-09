@@ -1,0 +1,8 @@
+.foto-panel{
+    margin: 0 10px;
+    display: block;
+}
+
+.foto-panel img{
+    width: 100%;
+}

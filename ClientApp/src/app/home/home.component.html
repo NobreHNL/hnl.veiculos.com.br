@@ -1,9 +1,11 @@
 <section>
-    <app-foto class="col-xs-12" [id]="destaque.id" [nome]="destaque.nome" [imagem]="destaque.imagem" ></app-foto>
+    <div class="row">
+        <app-foto class="col-xs-12" [id]="destaque.id" [nome]="destaque.nome" [imagem]="destaque.imagem" ></app-foto>
+    </div>
 
     <h1 class="section-title">As Melhores Marcas</h1>
     
     <div class="flex-center">
-        <app-foto class="col-xs-2 col-xs-offset-1" *ngFor="let marca of marcas" [id]="marca.id" [nome]="marca.nome" [imagem]="marca.imagem"></app-foto>
+        <app-foto class="col-xs-2" *ngFor="let marca of marcas" [id]="marca.id" [nome]="marca.nome" [imagem]="marca.imagem"></app-foto>
     </div>
 </section>

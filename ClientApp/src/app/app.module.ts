@@ -10,7 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { FotosModule } from './fotos/fotos.module';
-import { MarcaComponent } from './marca/marca.component';
+import { MarcasModule } from './marcas/marcas.module';
+import { MarcaComponent } from './marcas/marca/marca.component';
 
 @NgModule({
   declarations: [
@@ -19,18 +20,18 @@ import { MarcaComponent } from './marca/marca.component';
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    MarcaComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
     FotosModule,
+    MarcasModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
-      { path: 'marca:id', component: MarcaComponent },
+      { path: 'marca/:id', component: MarcaComponent },
     ])
   ],
   providers: [],

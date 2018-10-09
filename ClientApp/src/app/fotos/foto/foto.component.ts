@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-foto',
   templateUrl: './foto.component.html',
+  styleUrls: ['./foto.component.css'],
   host:{
     '(click)': 'link($event.target)'
   },
