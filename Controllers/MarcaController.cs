@@ -38,7 +38,7 @@ namespace hnl.veiculos.com.br.Controllers
         [HttpGet("[action]")]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
-        public async Task<ActionResult<MarcaModel>> GetMarcaById(decimal pId)
+        public async Task<ActionResult<MarcaModel>> GetMarcaById(Guid pId)
         {
             var marca = _service.get(pId);
             
@@ -60,7 +60,7 @@ namespace hnl.veiculos.com.br.Controllers
         [HttpDelete("[action]")]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
-        public async Task<ActionResult> DeleteMarca(decimal pId)
+        public async Task<ActionResult> DeleteMarca(Guid pId)
         {
             _service.delete(pId);
             return await Task.FromResult(NoContent());

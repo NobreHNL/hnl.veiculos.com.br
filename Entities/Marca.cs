@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
@@ -6,7 +7,7 @@ namespace hnl.veiculos.com.br.Entities
 {
     public class Marca
     {
-        public decimal ID {get; private set; }
+        public Guid ID {get; private set; }
         [Required][StringLength(255)]
         public string IMAGEM { get; private set; }
         public string NOME {get; private set;}
@@ -16,10 +17,10 @@ namespace hnl.veiculos.com.br.Entities
             MODELOS = new Collection<Modelo>();
         }
 
-        public Marca(decimal Id, string Nome, string Imagem){
-            this.ID = Id;
-            this.NOME = Nome;
-            this.IMAGEM = Imagem;
-        }
+        // public Marca(Guid Id, string Nome, string Imagem){
+        //     this.ID = Id;
+        //     this.NOME = Nome;
+        //     this.IMAGEM = Imagem;
+        // }
     }
 }

@@ -14,21 +14,21 @@ namespace hnl.veiculos.com.br.Services
         {
             _repository = repository;
         }
-        public void delete(decimal pId)
+        public void delete(Guid pId)
         {
-            if(pId == 0) throw new Exception("Informe um Id do Modelo para remover!");
+            if(pId == null) throw new Exception("Informe um Id do Modelo para remover!");
             _repository.delete(pId);
         }
 
-        public Modelo get(decimal pId)
+        public Modelo get(Guid pId)
         {
-            if(pId == 0) throw new Exception("Informe um Id do Modelo para obter!");
+            if(pId == null) throw new Exception("Informe um Id do Modelo para obter!");
             return _repository.get(pId);
         }
 
-        public List<Modelo> getById(decimal pId)
+        public List<Modelo> getById(Guid pId)
         {
-            if(pId == 0) throw new Exception("Informe um Id do Modelo para obter!");
+            if(pId == null) throw new Exception("Informe um Id do Modelo para obter!");
             return _repository.getById(pId);
         }
 

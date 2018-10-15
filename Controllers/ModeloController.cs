@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
@@ -23,7 +24,7 @@ namespace hnl.veiculos.com.br.Controllers
         [HttpGet("[action]")]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
-        public async Task<ActionResult<List<ModeloModel>>> GetModeloByMarcaId(decimal pId)
+        public async Task<ActionResult<List<ModeloModel>>> GetModeloByMarcaId(Guid pId)
         {
             var modelo = _service.getById(pId);
             

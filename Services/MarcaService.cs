@@ -15,15 +15,15 @@ namespace hnl.veiculos.com.br.Services
             _repository = repository;
         }
         
-        public void delete(decimal pId)
+        public void delete(Guid pId)
         {
-            if(pId == 0) throw new Exception("Informe um Id da Marca para remover!");
+            if(pId == null) throw new Exception("Informe um Id da Marca para remover!");
             _repository.delete(pId);
         }
 
-        public Marca get(decimal pId)
+        public Marca get(Guid pId)
         {
-            if(pId == 0) throw new Exception("Informe um Id da Marca para obter!");
+            if(pId == null) throw new Exception("Informe um Id da Marca para obter!");
             return _repository.get(pId);
         }
 
