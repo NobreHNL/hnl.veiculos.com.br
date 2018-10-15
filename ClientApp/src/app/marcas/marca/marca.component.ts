@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MarcaService } from './marca.service';
 import { ActivatedRoute } from '@angular/router';
-import { Marca } from './marca.interface';
+import { Marca} from './marca.interface';
+import { Modelo } from './modelo.interface';
 
 @Component({
   selector: 'app-marca',
@@ -10,6 +11,7 @@ import { Marca } from './marca.interface';
 })
 export class MarcaComponent implements OnInit {
   marca: Marca;
+  modelos: Modelo[];
   pId: number;
   constructor(private service: MarcaService, private route: ActivatedRoute) { }
 
@@ -18,7 +20,10 @@ export class MarcaComponent implements OnInit {
 
     this.service.getMarcaById(this.pId).subscribe(result => {
       this.marca = result;
-      console.log(this.marca);
+    }, error => console.error(error));
+
+    this.service.GetModeloByMarcaId(this.pId).subscribe(result => {
+      this.modelos = result;
     }, error => console.error(error));
   }
 

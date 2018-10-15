@@ -1,6 +1,7 @@
 import { Inject, Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Marca } from "./marca.interface";
+import { Modelo } from "./modelo.interface";
 
 
 @Injectable()
@@ -14,5 +15,9 @@ export class MarcaService{
 
     getMarcaById(pId: number){
         return this.http.get<Marca>(this.BASE_URL + 'api/Marca/GetMarcaById?pId=' + pId)
+    }
+
+    GetModeloByMarcaId(pId: number){
+        return this.http.get<Modelo[]>(this.BASE_URL + 'api/Modelo/GetModeloByMarcaId?pId=' + pId)
     }
 }

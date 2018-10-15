@@ -37,6 +37,11 @@ namespace hnl.veiculos.com.br.Repositories
             return modelos.Where(m => m.ID == pId).FirstOrDefault();
         }
 
+        public List<Modelo> getById(decimal pId)
+        {
+            return modelos.Where(m => m.IDMARCA == pId).ToList();
+        }
+
         public List<Modelo> list()
         {
             return modelos;

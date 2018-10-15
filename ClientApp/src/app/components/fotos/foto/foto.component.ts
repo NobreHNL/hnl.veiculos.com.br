@@ -1,5 +1,4 @@
-import { Component, Inject, Input } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-foto',
@@ -15,9 +14,4 @@ export class FotoComponent {
   @Input() nome='';
   @Input() imagem='';
   @Input() url='';
-
-  link(target){
-    
-  }
-
 }

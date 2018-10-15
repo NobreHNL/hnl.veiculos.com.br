@@ -26,6 +26,12 @@ namespace hnl.veiculos.com.br.Services
             return _repository.get(pId);
         }
 
+        public List<Modelo> getById(decimal pId)
+        {
+            if(pId == 0) throw new Exception("Informe um Id do Modelo para obter!");
+            return _repository.getById(pId);
+        }
+
         public List<Modelo> list()
         {
             return _repository.list();

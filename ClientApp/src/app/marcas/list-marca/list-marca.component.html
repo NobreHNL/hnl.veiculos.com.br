@@ -1,0 +1,8 @@
+<h1 class="section-title">{{title}}</h1>
+
+<button class="btn btn-sm btn-primary pull-right" *ngIf="action_add">Add Marca</button>
+<br />
+
+<div class="flex-center">
+  <app-foto class="col-xs-2 marca" *ngFor="let marca of marcas" [id]="marca.id" [nome]="marca.nome" [imagem]="marca.imagem" [url]="'/marcas/marca'"></app-foto>
+</div>

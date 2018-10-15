@@ -1,0 +1,15 @@
+.flex-center{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-items: center;
+}
+
+.marca{
+    height: 140px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    box-shadow: 1px 1px 1px 1px rgba(100, 100, 100, 0.5);
+    margin: 10px;
+}

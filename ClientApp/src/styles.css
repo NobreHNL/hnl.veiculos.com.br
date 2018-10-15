@@ -1,13 +1,8 @@
-.flex-center{
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-items: center;
-}
-
 .section-title{
     text-transform: uppercase;
     font-size: 2rem;
     border-bottom: 2px solid #e0e0e0;
+    font-weight: bold;
+    color: #4f4f4f;
 }
 

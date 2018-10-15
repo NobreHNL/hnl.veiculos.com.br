@@ -1,5 +1,4 @@
-<p>
-  marca works!
-</p>
-
 <app-foto class="col-xs-2" [id]="marca.id" [nome]="marca.nome" [imagem]="marca.imagem"></app-foto>
+
+<app-foto class="col-xs-3" *ngFor="let modelo of modelos" [id]="modelo.id" [nome]="modelo.nome" [imagem]="modelo.imagem"></app-foto>
+
