@@ -7,7 +7,7 @@ import { Modelo } from './modelo.interface';
 @Component({
   selector: 'app-marca',
   templateUrl: './marca.component.html',
-  styleUrls: ['./marca.component.css']
+  styleUrls: ['./../marcas.component.css']
 })
 export class MarcaComponent implements OnInit {
   marca: Marca;

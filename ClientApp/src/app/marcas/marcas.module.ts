@@ -4,14 +4,18 @@ import { MarcaComponent } from './marca/marca.component';
 import { MarcaService } from './marca/marca.service';
 import { ListMarcaComponent } from './list-marca/list-marca.component';
 import { FotosModule } from '../components/fotos/fotos.module';
-import { CreateMarcaComponent } from './marca/create-marca.component';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { CreateMarcaComponent } from './create-marca/create-marca.component';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
-    FotosModule      
+    FotosModule,
+    CommonModule,
+    ReactiveFormsModule,
+    FormsModule      
   ],
   exports:[
     ListMarcaComponent

@@ -13,8 +13,8 @@ import { FotosModule } from './components/fotos/fotos.module';
 import { MarcasModule } from './marcas/marcas.module';
 import { MarcaComponent } from './marcas/marca/marca.component';
 import { ListMarcaComponent } from './marcas/list-marca/list-marca.component';
-import { CreateMarcaComponent } from './marcas/marca/create-marca.component';
 import { CommonModule } from '@angular/common';
+import { CreateMarcaComponent } from './marcas/create-marca/create-marca.component';
 
 @NgModule({
   declarations: [

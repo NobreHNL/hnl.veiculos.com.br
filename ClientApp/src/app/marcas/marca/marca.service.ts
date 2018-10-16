@@ -14,10 +14,14 @@ export class MarcaService{
     }
 
     getMarcaById(pId: number){
-        return this.http.get<Marca>(this.BASE_URL + 'api/Marca/GetMarcaById?pId=' + pId)
+        return this.http.get<Marca>(this.BASE_URL + 'api/Marca/GetMarcaById?pId=' + pId);
+    }
+
+    createMarca(marca: Marca){
+        return this.http.post<Marca>(this.BASE_URL + 'api/Marca/CreateMarca', marca);
     }
 
     GetModeloByMarcaId(pId: number){
-        return this.http.get<Modelo[]>(this.BASE_URL + 'api/Modelo/GetModeloByMarcaId?pId=' + pId)
+        return this.http.get<Modelo[]>(this.BASE_URL + 'api/Modelo/GetModeloByMarcaId?pId=' + pId);
     }
 }
