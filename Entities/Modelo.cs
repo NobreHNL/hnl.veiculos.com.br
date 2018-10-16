@@ -14,12 +14,13 @@ namespace hnl.veiculos.com.br.Entities
         public string MARCA { get; private set; }
         public Guid IDMARCA { get; private set; }
 
-        // public Modelo(Guid pId, Guid pIdMarca, string Nome, string Marca, string Imagem){
-        //     this.ID = pId;
-        //     this.IDMARCA = pIdMarca;
-        //     this.NOME = Nome;
-        //     this.IMAGEM = Imagem;
-        //     this.MARCA = Marca;
-        // }
+        public Modelo(){}
+        public Modelo(Guid pId, Guid pIdMarca, string Nome, string Marca, string Imagem){
+            this.ID = pId;
+            this.IDMARCA = pIdMarca;
+            this.NOME = Nome;
+            this.IMAGEM = Imagem;
+            this.MARCA = Marca;
+        }
     }
 }

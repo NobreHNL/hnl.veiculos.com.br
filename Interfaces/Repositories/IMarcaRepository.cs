@@ -8,7 +8,7 @@ namespace hnl.veiculos.com.br.Interfaces.Repositories
     {
         Marca get(Guid pId);
         List<Marca> list();
-        Marca put(Marca marca);
+        Marca put(Marca marca);        
         void delete(Guid pId);
     }
 }

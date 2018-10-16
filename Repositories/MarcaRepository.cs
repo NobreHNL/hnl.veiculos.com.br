@@ -14,6 +14,7 @@ namespace hnl.veiculos.com.br.Repositories
         public MarcaRepository(AppDbContext context){            
             _context = context;
         }
+        
         public void delete(Guid pId)
         {
             var marca = get(pId);

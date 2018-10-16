@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 @Component({
     selector: 'app-create',
@@ -6,6 +6,6 @@ import { Component } from "@angular/core";
     styleUrls: ['./marca.component.css']
 })
 export class CreateMarcaComponent{
-
+    @Input() title: string = "Adicionar Marcas"
     
 }

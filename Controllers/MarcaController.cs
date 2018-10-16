@@ -39,7 +39,7 @@ namespace hnl.veiculos.com.br.Controllers
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
         public async Task<ActionResult<MarcaModel>> GetMarcaById(Guid pId)
-        {
+        {            
             var marca = _service.get(pId);
             
             if(marca == null) return NotFound();

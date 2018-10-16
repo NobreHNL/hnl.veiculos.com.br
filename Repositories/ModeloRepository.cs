@@ -14,6 +14,7 @@ namespace hnl.veiculos.com.br.Repositories
         public ModeloRepository(AppDbContext context){           
             _context = context;
         }
+        
         public void delete(Guid pId)
         {
             var modelo = get(pId);

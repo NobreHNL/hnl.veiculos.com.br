@@ -17,10 +17,10 @@ namespace hnl.veiculos.com.br.Entities
             MODELOS = new Collection<Modelo>();
         }
 
-        // public Marca(Guid Id, string Nome, string Imagem){
-        //     this.ID = Id;
-        //     this.NOME = Nome;
-        //     this.IMAGEM = Imagem;
-        // }
+        public Marca(Guid Id, string Nome, string Imagem){
+            this.ID = Id;
+            this.NOME = Nome;
+            this.IMAGEM = Imagem;
+        }
     }
 }
