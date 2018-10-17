@@ -29,8 +29,8 @@ namespace hnl.veiculos.com.br.Controllers
         [HttpPost("[action]")]
         [ProducesResponseType(201)]
         [ProducesResponseType(400)]
-        public async Task<ActionResult<MarcaModel>> CreateMarca(MarcaModel marca){            
-            _service.put(_mapper.Map<Marca>(marca));
+        public async Task<ActionResult<MarcaModel>> CreateMarca(string nome, string imagem){
+            var marca = new Marca(Guid.NewGuid(), nome, imagem);
 
             return await Task.FromResult(CreatedAtAction(nameof(GetMarcaById), new {id = marca.ID}, marca));
         }

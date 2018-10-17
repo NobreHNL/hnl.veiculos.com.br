@@ -18,7 +18,10 @@ export class MarcaService{
     }
 
     createMarca(marca: Marca){
-        return this.http.post<Marca>(this.BASE_URL + 'api/Marca/CreateMarca', marca);
+        const formData = new FormData();
+        formData.append('nome', marca.nome);
+        formData.append('imagem', marca.imagem);
+        return this.http.post(this.BASE_URL + 'api/Marca/CreateMarca', formData);
     }
 
     GetModeloByMarcaId(pId: number){

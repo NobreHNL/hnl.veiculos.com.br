@@ -18,8 +18,8 @@ export class CreateMarcaComponent implements OnInit{
     
     ngOnInit(){
         this.marcaForm = this.formBuilder.group({
-            NOME: ['', Validators.required],
-            IMAGEM: ['', Validators.required]
+            nome: ['', Validators.required],
+            imagem: ['', Validators.required]
         });
     }
 
@@ -33,7 +33,7 @@ export class CreateMarcaComponent implements OnInit{
 
     createMarca(){
         const marca = this.marcaForm.getRawValue();
-        marca.imagem = this.preview;
+        //marca.imagem = this.preview;
         this.service.createMarca(marca).subscribe(result => {
             console.log(result);
           }, error => console.error(error));
