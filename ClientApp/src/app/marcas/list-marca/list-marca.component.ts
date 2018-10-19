@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Marca } from '../marca/marca.interface';
-import { MarcaService } from '../marca/marca.service';
+import { MarcaService } from '../marca.service';
 
 @Component({
   selector: 'app-list-marca',
@@ -10,7 +10,7 @@ import { MarcaService } from '../marca/marca.service';
 export class ListMarcaComponent implements OnInit {
   public marcas: Marca[];
   @Input() title:string = 'Minhas Marcas';   
-  @Input() action_add:boolean = true;
+  @Input() action_add:string = 'true';
 
   constructor(private service: MarcaService) { }
 

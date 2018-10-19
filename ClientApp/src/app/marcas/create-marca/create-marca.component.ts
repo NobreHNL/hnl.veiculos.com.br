@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-import { MarcaService } from "../marca/marca.service";
+import { MarcaService } from "../marca.service";
+import { Router } from "@angular/router";
 
 @Component({
     selector: 'app-create',
@@ -14,12 +15,12 @@ export class CreateMarcaComponent implements OnInit{
     file: File;
     preview: string;
 
-    constructor(private service :MarcaService, private formBuilder: FormBuilder){ }
+    constructor(private service :MarcaService, private formBuilder: FormBuilder, private router: Router){ }
     
     ngOnInit(){
         this.marcaForm = this.formBuilder.group({
-            nome: ['', Validators.required],
-            imagem: ['', Validators.required]
+            NOME: ['', Validators.required],
+            IMAGEM: ['', Validators.required]
         });
     }
 
@@ -33,9 +34,10 @@ export class CreateMarcaComponent implements OnInit{
 
     createMarca(){
         const marca = this.marcaForm.getRawValue();
-        //marca.imagem = this.preview;
+        marca.IMAGEM = this.preview;
         this.service.createMarca(marca).subscribe(result => {
             console.log(result);
+            this.router.navigate(['']);
           }, error => console.error(error));
     }
 

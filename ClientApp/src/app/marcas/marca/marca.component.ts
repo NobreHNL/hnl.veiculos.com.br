@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MarcaService } from './marca.service';
-import { ActivatedRoute } from '@angular/router';
+import { MarcaService } from '../marca.service';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Marca} from './marca.interface';
 import { Modelo } from './modelo.interface';
 
@@ -12,11 +12,11 @@ import { Modelo } from './modelo.interface';
 export class MarcaComponent implements OnInit {
   marca: Marca;
   modelos: Modelo[];
-  pId: number;
-  constructor(private service: MarcaService, private route: ActivatedRoute) { }
+  pId: string;
+  constructor(private service: MarcaService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
-    this.pId = parseInt(this.route.snapshot.paramMap.get('id'));
+    this.pId = this.route.snapshot.paramMap.get('id');
 
     this.service.getMarcaById(this.pId).subscribe(result => {
       this.marca = result;
@@ -27,4 +27,10 @@ export class MarcaComponent implements OnInit {
     }, error => console.error(error));
   }
 
+  removeMarca(){
+    this.service.removeMarca(this.pId).subscribe(result => {
+      this.router.navigate(['/marcas']);
+      console.log(result);
+    }, error => console.error(error));
+  }
 }

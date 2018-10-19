@@ -42,7 +42,8 @@ namespace hnl.veiculos.com.br
             // services.AddEntityFrameworkSqlServer().AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("BaseCotacoes")));
             
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            
+            services.AddCors();
+
             services.AddScoped<IMarcaService, MarcaService>();
             services.AddScoped<IMarcaRepository, MarcaRepository>();
             services.AddScoped<IModeloService, ModeloService>();
@@ -72,7 +73,6 @@ namespace hnl.veiculos.com.br
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
 
@@ -82,6 +82,9 @@ namespace hnl.veiculos.com.br
                     name: "default",
                     template: "{controller}/{action=Index}/{id?}");
             });
+
+            app.UseCors(builder =>
+                builder.AllowAnyOrigin());
 
             app.UseSpa(spa =>
             {

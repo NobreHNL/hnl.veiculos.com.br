@@ -25,14 +25,13 @@ namespace hnl.veiculos.com.br.Controllers
             _service = service;
         }
 
-
         [HttpPost("[action]")]
-        [ProducesResponseType(201)]
-        [ProducesResponseType(400)]
-        public async Task<ActionResult<MarcaModel>> CreateMarca(string nome, string imagem){
-            var marca = new Marca(Guid.NewGuid(), nome, imagem);
+        public async Task<ActionResult<MarcaModel>> CreateMarca(MarcaModel marca){            
+                                  
+            var _marca = new Marca(Guid.NewGuid(), marca.NOME, marca.IMAGEM);
+            _service.post(_marca);
 
-            return await Task.FromResult(CreatedAtAction(nameof(GetMarcaById), new {id = marca.ID}, marca));
+            return await Task.FromResult(CreatedAtAction(nameof(GetMarcaById), new {id = _marca.ID}, _marca));
         }
 
         [HttpGet("[action]")]

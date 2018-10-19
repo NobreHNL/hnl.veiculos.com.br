@@ -1,6 +1,6 @@
 <h1 class="section-title">{{title}}</h1>
 
-<button class="btn btn-sm btn-primary pull-right" *ngIf="action_add" [routerLink]="'/marcas/create'">Add Marca</button>
+<button class="btn btn-sm btn-primary pull-right" *ngIf="action_add == 'true'" [routerLink]="'/marcas/create'">Add Marca</button>
 <br />
 
 <div class="flex-center">

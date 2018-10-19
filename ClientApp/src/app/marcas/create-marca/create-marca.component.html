@@ -1,24 +1,24 @@
-<div class="container">
+<div class="container-fluid">
     <h1 class="section-title">{{title}}</h1>
     <div class="row">
-        <form class="form-marca" [formGroup]="marcaForm" (submit)="createMarca()">
-            <div class="col-xs-12 col-sm-6">
+        <form class="form-marca" [formGroup]="marcaForm" (ngSubmit)="createMarca()">
+            <div class="col-xs-12 col-sm-4">
                 <div class="form-group ">
-                    <label for="nome" class="label-control">Nome</label>
-                    <input type="text"  formControlName="nome" class="form-control" id="nome" name="nome">
-                    <span class="validators-error" *ngIf="marcaForm.get('nome').errors?.required">Informe o nome da marca!</span>
+                    <label for="NOME" class="label-control">Nome</label>
+                    <input type="text"  formControlName="NOME" class="form-control" id="NOME" name="NOME">
+                    <span class="validators-error" *ngIf="marcaForm.get('NOME').errors?.required">*Informe o nome da marca!</span>
                 </div>       
                 <div class="form-group">
-                    <label for="imagem" class="label-control">Imagem</label>
+                    <label for="IMAGEM" class="label-control">Imagem</label>
                     <button type="button" (click)="fileInput.click()" class="btn btn-lg btn-warning col-xs-12"><span class="glyphicon glyphicon-picture  col-xs-12"></span></button>
-                    <input #fileInput type="file" accept="image/*" formControlName="imagem"  class="form-control" id="imagem" name="imagem" (change)="handleFile($event.target.files[0])" style="display:none">
-                    <span class="validators-error"  *ngIf="marcaForm.get('imagem').errors?.required">Selecione a imagem da marca!</span>
+                    <input #fileInput type="file" accept="image/*" formControlName="IMAGEM"  class="form-control" id="IMAGEM" name="IMAGEM" (change)="handleFile($event.target.files[0])" style="display:none">
+                    <span class="validators-error clearfix"  *ngIf="marcaForm.get('IMAGEM').errors?.required">*Selecione a imagem da marca!</span>
                 </div>
             </div>
-        <div class="preview-marca col-xs-12 col-sm-6">
-            <label class="subsec-title">{{marcaForm.get('nome').value}}</label>
+        <div class="preview-marca col-xs-12 col-sm-8">
+            <label class="subsec-title">{{marcaForm.get('NOME').value}}</label>
             <div class="imagem">
-                <app-foto class="col-xs-6 col-xs-offset-3" [id]="0" [nome]="marcaForm.get('nome').value" [imagem]="preview" [url]="''"></app-foto>
+                <app-foto class="col-xs-6 col-xs-offset-3" [id]="0" [nome]="marcaForm.get('NOME').value" [imagem]="preview" [url]="''"></app-foto>
             </div>
             <div class="clearfix"></div>
         </div>

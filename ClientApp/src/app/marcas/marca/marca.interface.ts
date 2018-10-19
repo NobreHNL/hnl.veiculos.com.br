@@ -1,5 +1,5 @@
 export interface Marca {
-    id: number;
-    nome: string;
-    imagem: string;
+    ID: number;
+    NOME: string;
+    IMAGEM: string;
   }

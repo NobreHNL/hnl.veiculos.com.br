@@ -8,6 +8,7 @@ namespace hnl.veiculos.com.br.Interfaces.Services
     {
          Marca get(Guid pId);         
          List<Marca> list();
+         Marca post(Marca marca);
          Marca put(Marca marca);
          void delete(Guid pId);
     }

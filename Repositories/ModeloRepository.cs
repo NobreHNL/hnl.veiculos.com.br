@@ -19,6 +19,7 @@ namespace hnl.veiculos.com.br.Repositories
         {
             var modelo = get(pId);
             _context.Remove(modelo);
+            _context.SaveChanges();
         }
 
         public Modelo get(Guid pId)
@@ -39,8 +40,15 @@ namespace hnl.veiculos.com.br.Repositories
         public Modelo put(Modelo modelo)
         {
             _context.Update(modelo);
+            _context.SaveChanges();
             return modelo;
         }
 
+        public Modelo post(Modelo modelo)
+        {
+            _context.Add(modelo);
+            _context.SaveChanges();
+            return modelo;
+        }
     }
 }

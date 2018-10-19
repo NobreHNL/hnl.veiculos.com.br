@@ -19,6 +19,7 @@ namespace hnl.veiculos.com.br.Repositories
         {
             var marca = get(pId);
             _context.Marca.Remove(marca);
+            _context.SaveChanges();
         }
 
         public Marca get(Guid pId)
@@ -31,9 +32,17 @@ namespace hnl.veiculos.com.br.Repositories
             return _context.Marca.ToList();
         }
 
+        public Marca post(Marca marca)
+        {
+            _context.Marca.Add(marca);
+            _context.SaveChanges();
+            return marca;
+        }
+
         public Marca put(Marca marca)
         {
             _context.Marca.Update(marca);
+            _context.SaveChanges();
             return marca;
         }
     }

@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
   constructor() {
     this.destaque.id = 0;
     this.destaque.nome = "As melhores Marcas";
-    this.destaque.imagem = "./assets/images.jpg"    
+    this.destaque.imagem = "./assets/banner-marcas-2.png"    
   }
   
   ngOnInit(): void {

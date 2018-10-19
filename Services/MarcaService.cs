@@ -32,6 +32,12 @@ namespace hnl.veiculos.com.br.Services
             return _repository.list();
         }
 
+        public Marca post(Marca marca)
+        {
+            if(marca == null) throw new Exception("Informe uma Marca para adicionar!"); 
+            return _repository.post(marca);
+        }
+
         public Marca put(Marca marca)
         {
             if(marca == null) throw new Exception("Informe uma Marca para adicionar!"); 
