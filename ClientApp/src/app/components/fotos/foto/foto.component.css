@@ -1,8 +1,16 @@
+:host{
+  float: left;
+  position: relative;
+}
+
 .foto-panel{
     margin: 10px 0;
     display: block;
+    padding: 10px 0;
 }
 
-.foto-panel img{
-    width: 100%;
-}
+  .foto-panel img {
+    width: 90%;
+    max-height: 90%;
+    margin: 0 auto;
+  }

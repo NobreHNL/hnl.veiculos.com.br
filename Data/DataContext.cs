@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace hnl.veiculos.com.br.Data
 {
-    public class AppDbContext: DbContext
+    public class DataContext: DbContext
     {
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options){ }
+        public DataContext(DbContextOptions<DataContext> options) : base(options){ }
 
         public DbSet<Marca> Marca { get; set; }
         public DbSet<Modelo> Modelo { get; set; }

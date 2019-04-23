@@ -19,5 +19,4 @@ export class ListMarcaComponent implements OnInit {
       this.marcas = result;
     }, error => console.error(error));
   }
-
 }

@@ -6,7 +6,7 @@ import { Router } from "@angular/router";
 @Component({
     selector: 'app-create',
     templateUrl: 'create-marca.component.html',
-    styleUrls: ['./../marcas.component.css']
+    styleUrls: ['./../marca/marcas.component.css']
 })
 export class CreateMarcaComponent implements OnInit{
     @Input() title: string = "Adicionar Marcas"

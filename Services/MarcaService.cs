@@ -18,7 +18,8 @@ namespace hnl.veiculos.com.br.Services
         public void delete(Guid pId)
         {
             if(pId == null) throw new Exception("Informe um Id da Marca para remover!");
-            _repository.delete(pId);
+            var marca = _repository.get(pId);
+            _repository.delete(marca);
         }
 
         public Marca get(Guid pId)

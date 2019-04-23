@@ -10,14 +10,13 @@ namespace hnl.veiculos.com.br.Repositories
 {
     public class MarcaRepository : IMarcaRepository
     {        
-        protected readonly AppDbContext _context;
-        public MarcaRepository(AppDbContext context){            
+        protected readonly DataContext _context;
+        public MarcaRepository(DataContext context){            
             _context = context;
         }
         
-        public void delete(Guid pId)
+        public void delete(Marca marca)
         {
-            var marca = get(pId);
             _context.Marca.Remove(marca);
             _context.SaveChanges();
         }

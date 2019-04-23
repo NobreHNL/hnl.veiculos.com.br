@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using hnl.veiculos.com.br.Models;
+using hnl.veiculos.com.br.ModelsDTO;
 using hnl.veiculos.com.br.Services;
 using hnl.veiculos.com.br.Interfaces.Services;
 using hnl.veiculos.com.br.Mappers;

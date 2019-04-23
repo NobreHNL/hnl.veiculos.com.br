@@ -10,14 +10,13 @@ namespace hnl.veiculos.com.br.Repositories
 {
     public class ModeloRepository : IModeloRepository
     {
-        protected readonly AppDbContext _context;
-        public ModeloRepository(AppDbContext context){           
+        protected readonly DataContext _context;
+        public ModeloRepository(DataContext context){           
             _context = context;
         }
         
-        public void delete(Guid pId)
+        public void delete(Modelo modelo)
         {
-            var modelo = get(pId);
             _context.Remove(modelo);
             _context.SaveChanges();
         }

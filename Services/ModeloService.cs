@@ -17,7 +17,8 @@ namespace hnl.veiculos.com.br.Services
         public void delete(Guid pId)
         {
             if(pId == null) throw new Exception("Informe um Id do Modelo para remover!");
-            _repository.delete(pId);
+            var modelo = _repository.get(pId);
+            _repository.delete(modelo);
         }
 
         public Modelo get(Guid pId)
@@ -35,6 +36,12 @@ namespace hnl.veiculos.com.br.Services
         public List<Modelo> list()
         {
             return _repository.list();
+        }
+
+        public Modelo post(Modelo modelo)
+        {
+            if (modelo == null) throw new Exception("Informe um Modelo para adicionar!");
+            return _repository.post(modelo);
         }
 
         public Modelo put(Modelo modelo)

@@ -10,6 +10,6 @@ namespace hnl.veiculos.com.br.Interfaces.Repositories
         List<Marca> list();
         Marca put(Marca marca);        
         Marca post(Marca marca);        
-        void delete(Guid pId);
+        void delete(Marca marca);
     }
 }

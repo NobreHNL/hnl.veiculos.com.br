@@ -10,7 +10,7 @@ namespace hnl.veiculos.com.br.Interfaces.Repositories
          List<Modelo> list();
          Modelo put(Modelo modelo);
          Modelo post(Modelo modelo);
-         void delete(Guid pId);         
+         void delete(Modelo modelo);         
          List<Modelo> getById(Guid pId);
     }
 }

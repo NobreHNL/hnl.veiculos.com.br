@@ -1,6 +1,7 @@
-<button class="btn btn-sm btn-primary pull-right" (click)="removeMarca()">Del Marca</button>
-<app-foto class="col-xs-2" [id]="marca.id" [nome]="marca.nome" [imagem]="marca.imagem"></app-foto>
-
+<h1 class="section-title">Modelos - {{marca.nome}}</h1>
+<!--<app-foto class="imagem-titulo" [id]="marca.id" [nome]="marca.nome" [imagem]="marca.imagem"></app-foto>-->
+<br />
+<div class="clearfix"></div>
 <app-foto class="col-xs-3" *ngFor="let modelo of modelos" [id]="modelo.id" [nome]="modelo.nome" [imagem]="modelo.imagem"></app-foto>
 
 
